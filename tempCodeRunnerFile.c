@@ -1,5 +1,4 @@
-int deletion(int n)
-{
-    n = n/10;
-    return n;
-}
+
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
