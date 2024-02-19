@@ -14,25 +14,28 @@ void print_arr(int arr[], int size)
 
 void main(){
     system("cls");
-    // printf("Hello world\n");
+    
     int arr[] = {100, 200, 300, 400, 500, 600};
     int size = sizeof(arr)/sizeof(int);
-    int s_index = 3;
+    
+    int s_index;
+    printf("Enter the index in which you want to split: ");
+    scanf("%d", &s_index);
+
     int* arr1 = (int*)malloc(sizeof(int)*s_index);
-    int* arr2 = (int*)malloc(sizeof(int)*(size - s_index - 1));
-    // int* arr2;
-    for (int i = 0; i < size; i++)
+    int* arr2 = (int*)malloc(sizeof(int)*(size - s_index));
+
+    for (int i = 0; i < s_index; i++)
     {
-        if (i <= s_index)
-        {
-            arr1[i] = arr[i];
-        }
-        else
-        {
-            arr2[i - s_index - 1] = arr2[i];
-        }
+        arr1[i] = arr[i];
     }
+    for (int i = 0; i < (size - s_index); i++)
+    {
+        arr2[i] = arr[i + s_index];
+    }
+    
     print_arr(arr1, s_index);
-    // print_arr(arr2, size-s_index-1);
+    printf("\n");
+    print_arr(arr2, size-s_index);
     
 }
