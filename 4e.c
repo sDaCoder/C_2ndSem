@@ -31,14 +31,16 @@ void display(int arr[3][3])
 
 void main(){
     system("cls");
-    int arr1[3][3], arr2[3][3], sarr[3][3], parr[3][3];
+    int arr1[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int arr2[3][3] = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
+    int sarr[3][3], parr[3][3];
 
-    create_arr(arr1);
-    printf("\n");
-    create_arr(arr2);
+    // create_arr(arr1);
+    // printf("\n");
+    // create_arr(arr2);
 
-    display(arr1);
-    display(arr2);
+    // display(arr1);
+    // display(arr2);
 
     // Performing matrix addition
     for (int i = 0; i < 3; i++)

@@ -20,10 +20,10 @@ void main(){
     // system("cls");
     int **arr;
     int rows, cols;
-    printf("Enter number of rows: ");
-    scanf("%d", &rows);
-    printf("Enter number of columns: ");
-    scanf("%d", &cols);
+    printf("Enter number of rows and cols: ");
+    scanf("%d %d", &rows, &cols);
+    // printf("Enter number of columns: ");
+    // scanf("%d", &cols);
 
     arr = (int**)malloc(rows*sizeof(int*));
     

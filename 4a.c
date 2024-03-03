@@ -13,8 +13,6 @@ void print_arr(int arr[], int size)
 }
 
 void main(){
-    system("cls");
-    printf("Hello world\n");
     int *arr;
     int size;
     printf("Enter the size of the array: ");
