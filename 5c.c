@@ -28,6 +28,16 @@ void main(){
             break;
         }
     }
+    // char* rev = reverse(name);
+
+    // for (int i = 0; i < strlen(name); i++)
+    // {
+    //     if (rev[i] != name[i])
+    //     {
+    //         isPalindrome = 0;
+    //     }
+        
+    // }
     
     if (isPalindrome)
     {
