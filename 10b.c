@@ -3,37 +3,20 @@
 #include <math.h>
 #include <stdlib.h>
 
-int lines(FILE* fp)
+void main()
 {
-    char c = fgetc(fp);
-    int lines = 1;
-    while (c != EOF)
-    {
-        if (c == '\n')
-        {
-            lines++;
-        }
-    }
-    return lines;
-}
+    FILE *file;
+    char subject[50];
+    int marks, count = 0, total = 0;
 
-void main(){
-    FILE* fp = fopen("report.txt", "r");
-    char c = fgetc(fp);
-    while (c != EOF)
-    {
-        int num = 0;
-        if (c>='0' && c<='9')
-        {
-            int n = c - '0';
-            num = num*10 + n;
-            printf("%d\n", num);
-        }
-        else if (c == '\n')
-        {
-            printf("\n");
-        }
-        c = fgetc(fp);
+    file = fopen("report.txt", "r");
+
+    while (fscanf(file, "%[^:]:%d", subject, &marks) == 2) {
+        total += marks;
+        count++;
     }
-    fclose(fp);
+
+    fclose(file);
+
+    printf("Average marks: %.2f\n", (float)total/count);
 }

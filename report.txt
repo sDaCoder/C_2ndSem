@@ -1,4 +1,3 @@
-Maths:23
-English:20
-Physics:29
-Chemistry:47
+Maths:25
+Physics:23
+Chemistry:24
