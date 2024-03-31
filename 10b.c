@@ -11,7 +11,8 @@ void main()
 
     file = fopen("report.txt", "r");
 
-    while (fscanf(file, "%[^:]:%d", subject, &marks) == 2) {
+    // while (fscanf(file, "%[^:]:%d", subject, &marks) == 2) {
+    while (fscanf(file, "%[^->]->%d", subject, &marks) == 2) {
         total += marks;
         count++;
     }
